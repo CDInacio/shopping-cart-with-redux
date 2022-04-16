@@ -11,7 +11,7 @@ export default function Nav() {
           <i>
             <BsCart2 size={25} />
           </i>
-          <p>( 0 )</p>
+          <p>( 1 )</p>
         </li>
       </ul>
     </nav>

@@ -4,6 +4,7 @@ export default function HomePage() {
   return (
     <>
       <Nav />
+      <p>as</p>
     </>
   );
 }

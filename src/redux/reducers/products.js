@@ -1,10 +1,10 @@
-import { FETCH_PRODUCTS } from "../actions/actions-type";
+import { FETCH_PRODUCTS } from "../actions/action-type";
 
 const initialState = {
   products: [],
 };
 
-const productsReducer = (state = initialState, action) => {
+const products = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_PRODUCTS:
       return { ...state, products: action.payload };
@@ -13,4 +13,4 @@ const productsReducer = (state = initialState, action) => {
   }
 };
 
-export default productsReducer;
+export default products;
