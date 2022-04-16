@@ -7,9 +7,10 @@ import HomePage from "./pages/HomePage";
 
 function App() {
   const notification = useSelector((state) => state.notification);
+  const products = useSelector((state) => state.products);
   const dispatch = useDispatch();
 
-  console.log(notification.loading);
+  console.log(products.products);
 
   useEffect(() => {
     dispatch(fetchProducts());
