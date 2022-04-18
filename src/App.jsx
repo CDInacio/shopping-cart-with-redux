@@ -1,24 +1,17 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
-import { fetchProducts } from "./redux/actions/products";
+import { fetchAllProducts } from "./redux/actions/products";
 
 import HomePage from "./pages/HomePage";
+import ProductDetail from "./components/products/productDetail";
 
 function App() {
-  const notification = useSelector((state) => state.notification);
-  const products = useSelector((state) => state.products);
-  const dispatch = useDispatch();
-
-  console.log(products.products);
-
-  useEffect(() => {
-    dispatch(fetchProducts());
-  }, [dispatch]);
   return (
     <>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
       </Routes>
     </>
   );
