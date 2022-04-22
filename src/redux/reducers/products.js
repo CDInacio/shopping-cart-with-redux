@@ -10,7 +10,7 @@ const products = (state = initialState, action) => {
     case FETCH_PRODUCTS:
       return { ...state, products: action.payload };
     case FETCH_PRODUCT:
-      return { ...state, product: action.payload };
+      return { product: action.payload };
     case CLEAR: {
       return { product: [] };
     }
