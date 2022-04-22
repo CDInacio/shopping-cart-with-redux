@@ -1,6 +1,14 @@
-import { FETCH_PRODUCT, FETCH_PRODUCTS, LOADING, CLEAR } from "./action-type";
+import {
+  FETCH_PRODUCT,
+  FETCH_PRODUCTS,
+  LOADING,
+  CLEAR,
+  ADD_TO_CART,
+} from "./action-type";
 
 const BASE_URL = "https://fakestoreapi.com";
+
+// PRODUCT ACTIONS
 
 export const fetchAllProducts = () => {
   return async (dispatch) => {
@@ -32,5 +40,13 @@ export const fetchSingleProduct = (id) => {
 export const clear = () => {
   return (dispatch) => {
     dispatch({ type: CLEAR });
+  };
+};
+
+// CART ACTIONS
+
+export const addToCart = (product) => {
+  return (dispatch) => {
+    dispatch({ type: ADD_TO_CART, payload: product });
   };
 };
